@@ -1,14 +1,15 @@
-fun convert(x: Double, converter: (Double) -> Double): Double{
+fun convert(x: Double, converter: (Double) -> Double): (Double) -> Double{
 
     val result = converter(x)
     println("$x is converted to $result")
-    return result
+    return {it + 344}
 
 }
 
 
 fun main() {
-    convert(20.toDouble(), {println("GG")
-        it * 1.8 + 32
-                             })
+
+    val a: (Double) -> Double = convert(40.toDouble(), {it + 32})
+    println(a(56.0))
+
 }
