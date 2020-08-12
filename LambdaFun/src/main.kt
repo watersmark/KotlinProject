@@ -1,4 +1,7 @@
-fun convert(x: Double, converter: (Double) -> Double): (Double) -> Double{
+typealias DoubleConversion = (Double) -> Double
+
+// Использовали typealias
+fun convert(x: Double, converter: DoubleConversion): DoubleConversion{
 
     val result = converter(x)
     println("$x is converted to $result")
@@ -9,7 +12,7 @@ fun convert(x: Double, converter: (Double) -> Double): (Double) -> Double{
 
 fun main() {
 
-    val a: (Double) -> Double = convert(40.toDouble(), {it + 32})
-    println(a(56.0))
+
+
 
 }
