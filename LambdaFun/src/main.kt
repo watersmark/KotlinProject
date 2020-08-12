@@ -14,4 +14,5 @@ fun main() {
     val temp4: (Int) -> Double = {it + 3.4}
     println(temp4(1))
 
+    
 }
