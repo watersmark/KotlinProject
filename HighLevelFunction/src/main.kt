@@ -8,11 +8,14 @@ data class temp(val a: Int) {
 }
 
 fun main() {
-    val new1: temp = temp(112)
-    val new2: temp = temp(141)
-    val mass: MutableList<temp> = mutableListOf(new1, new2)
+    val maps: MutableMap<String, Int> = mutableMapOf("First" to 1, "Second" to 2, "Third" to 3)
 
-    println(mass.minBy { it.age })
-    println(mass.maxBy { it.age })
+    println(maps.values.sumBy{it})
+    println(maps.keys)
+
+    for((k, v) in maps.entries){
+        print(k + " " + v)
+        //println(v)
+    }
 
 }
