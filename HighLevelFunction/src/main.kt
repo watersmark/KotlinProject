@@ -8,14 +8,12 @@ data class temp(val a: Int) {
 }
 
 fun main() {
-    val maps: MutableMap<String, Int> = mutableMapOf("First" to 1, "Second" to 2, "Third" to 3)
 
-    println(maps.values.sumBy{it})
-    println(maps.keys)
+    val temp: List<Int> = listOf(1, 3, 4, 2)
 
-    for((k, v) in maps.entries){
-        print(k + " " + v)
-        //println(v)
-    }
+    val summ_temp_int = temp.sumBy{it + 32}
+    val summ_temp = temp.sumByDouble { (it * 32).toDouble() }
+    
 
 }
+
