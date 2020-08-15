@@ -20,6 +20,10 @@ fun main() {
     // Промежуточный результат записыается в старт
     val temp_3 = list_String.fold("") { start: String, item: String -> start + item + " " }
     println(temp_3)
+    
+    // reduce
+    val temp_4 = list_String.reduce() { start: String, item: String -> start + item + " " }
+    println(temp_4)
 
 }
 
