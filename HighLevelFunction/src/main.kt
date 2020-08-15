@@ -9,11 +9,13 @@ data class temp(val a: Int) {
 
 fun main() {
 
-    val temp: List<Int> = listOf(1, 3, 4, 2)
+    val list_test: List<Int> = mutableListOf(1, 2, 3, 12, 7, 5)
+    val temp1 = list_test.filter { it > 3 }.map { it  }
 
-    val summ_temp_int = temp.sumBy{it + 32}
-    val summ_temp = temp.sumByDouble { (it * 32).toDouble() }
     
+    for(i in temp1){
+        println(i)
+    }
 
 }
 
