@@ -10,7 +10,16 @@ data class temp(val a: Int) {
 fun main() {
 
     val list_test: List<Int> = mutableListOf(1, 2, 3, 12, 7, 5)
-    val new_1 = list_test.filter{it > 3}.forEach{ println(it)}
+    //val temp_1 = list_test.groupBy { it  }.forEach{ println(it.key)}
+    val list_String = listOf("Topa", "Bopa", "Opa")
+
+    val temp_2 = list_test.fold(0) { start: Int, item: Int -> start + item }
+    println(list_test.sum())
+    println(temp_2)
+
+    // Промежуточный результат записыается в старт
+    val temp_3 = list_String.fold("") { start: String, item: String -> start + item + " " }
+    println(temp_3)
 
 }
 
